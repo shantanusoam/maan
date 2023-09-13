@@ -78,5 +78,5 @@
       "*.tsx": "typescriptreact"
     },
     "explorer.confirmDragAndDrop": false,
-    "window.zoomLevel": 0.002
+    "window.zoomLevel": -1
   }

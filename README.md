@@ -27,8 +27,42 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### Install Clerk
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Clerk is the third-party authentication provider for the application
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm i @clerk/nextjs
+```
+
+**Add Clerk secrets to .env.local**
+
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_XXXXXXXX
+CLERK_SECRET_KEY=sk_test_XXXXXX
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/journal
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/new-user
+```
+
+### PlanetScale Serverless SQL Database
+
+1. Create a [PlanetScale Database](https://planetscale.com/)
+2. Install [pscale CLI](https://github.com/planetscale/cli#installation)
+3. Use the CLI to connect to the DB: `pscale auth login`
+4. Create a `dev` database branch: `pscale branch create maan dev`
+5. Start the connection: `pscale connect maan dev --port 3309`
+
+### Prisma ORM
+
+1. Install Prisma Client: `npm i @prisma/client`
+2. Install Prisma as dev dependency: `npm i prisma --save-dev`
+3. Initialize Prisma: `npx prisma init`
+
+### OpenAI API Account Setup
+
+1. Create an [openai.com](https://openai.com/) account
+2. Select the `API` App.
+3. Create an [API Key](https://platform.openai.com/account/api-keys)
+4. Copy/Paste the key into your into `.env.local` using the variable `OPENAI_API_KEY`
