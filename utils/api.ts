@@ -31,16 +31,19 @@ export const newEntry = async () => {
   }
 }
 
-export const updateEntry = async (id, updates) => {
+export const updateEntry = async (id, content) => {
+  console.log('updates.........', content)
   const res = await fetch(
     new Request(createURL(`/api/entry/${id}`), {
       method: 'PATCH',
-      body: JSON.stringify({ updates }),
+      body: JSON.stringify({ content }),
     })
   )
 
   if (res.ok) {
-    return res.json()
+    const data = await res.json()
+    return data.data
+    // return res.json()
   } else {
     throw new Error('Something went wrong on API server!')
   }

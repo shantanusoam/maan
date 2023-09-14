@@ -52,7 +52,7 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/new-user
 2. Install [pscale CLI](https://github.com/planetscale/cli#installation)
 3. Use the CLI to connect to the DB: `pscale auth login`
 4. Create a `dev` database branch: `pscale branch create maan dev`
-5. Start the connection: `pscale connect maan dev --port 3309`
+5. Start the connection: `pscale connect maan dev --port 3390`
 
 ### Prisma ORM
 
