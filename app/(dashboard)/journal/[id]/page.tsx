@@ -21,11 +21,12 @@ const getEntry = async (id) => {
 
 const JournalEditorPage = async ({ params }) => {
   const entry = await getEntry(params.id)
+  const {mood, summary, color, subject, negative} = entry?.analysis
   const analysisData = [
-    {name: 'Summary', value: ''},
-    {name: 'Subject', value: ''},
-    {name: 'Mood', value: ''},
-    {name: 'Negative', value: false}
+    {name: 'Summary', value: summary},
+    {name: 'Subject', value: subject},
+    {name: 'Mood', value: mood},
+    {name: 'Negative', value: negative ? 'True' : 'False'}
 
 
   ]
@@ -34,15 +35,22 @@ const JournalEditorPage = async ({ params }) => {
       <div className='col-span-2'>
       <Editor entry={entry} />
       </div>
-      <div className='border-l border-black/10 p-3'> <div className='bg-blue-300 px-6 py-10'>
-        <h2>Analysis</h2>
+      <div className='border-l border-black/10'> <div className='py-10 px-2' style={{backgroundColor: color}}>
+        <h2 className='text-xl'>Analysis</h2>
         </div>
         <ul>
-          <li></li>
+          
+          {analysisData.map((item) => (
+            <li key={item.name} className='px-2 py-4 flex items-center justify-between border-b border-t border-black/10'>
+              <span className='text-lg font-semibold'>{item.name}</span>
+                <span>{item.value}</span>
+
+            </li>
+          ))}
         </ul>
         </div>
     </div>
   )
 }
 
-export default JournalEditorPage
+export default JournalEditorPage 

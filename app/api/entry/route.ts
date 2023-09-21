@@ -1,4 +1,5 @@
 // import { update } from '@/utils/actions'
+import { analyse } from '@/utils/ai'
 import { getUserFromClerkID } from '@/utils/auth'
 import { prisma } from '@/utils/db'
 import { revalidatePath } from 'next/cache'
@@ -15,9 +16,22 @@ export const POST = async (request: Request) => {
           id: user.id,
         },
       },
-    
+       
     },
   })
+  const analysis = await analyse(entry.content)
+  await prisma.entryAnalysis.create({
+    data:{
+      entry: { connect: { id: entry.id } }, // Connect to the corresponding JournalEntry
+      user: {
+        connect: {
+          id: user.id,
+        },
+      }, // Connect to the corresponding User
+      ...analysis
+    }
+  })
+  
   revalidatePath('/journal')
   // update(['/journal'])
 

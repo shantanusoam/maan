@@ -78,5 +78,6 @@
       "*.tsx": "typescriptreact"
     },
     "explorer.confirmDragAndDrop": false,
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "WillLuke.nextjs.hasPrompted": true
   }

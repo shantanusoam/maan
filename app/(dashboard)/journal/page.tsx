@@ -1,5 +1,6 @@
 import EntryCard from '@/components/EntryCard'
 import NewEntry from '@/components/NewEntry'
+import { analyse } from '@/utils/ai'
 // import Question from '@/components/Question'
 // import { qa } from '@/util/ai'
 import { getUserFromClerkID } from '@/utils/auth'
@@ -19,7 +20,7 @@ const getEntries = async () => {
       analysis: true,
     },
   })
-
+  // await analyse('so today i wake up pretty late there was lot of things to do and i was confused as it was pretty sacry idk what to for fuck shake it was not horrible but then i start making things up nto the mark in easy way go on a course completed my job then downloaded some games of cause illegally and then try to play it but got nothing in exitment but then i got something a kiss it was fulffilling')
   return data
 }
 

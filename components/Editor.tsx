@@ -15,7 +15,8 @@ const Editor = ({entry}) => {
       setIsLoading(true)
       const updated = await updateEntry(entry.id, _value)
        setIsLoading(false)
-    }
+    },
+    interval: 4000,
   })
   return (
     <div className="w-full h-full">
