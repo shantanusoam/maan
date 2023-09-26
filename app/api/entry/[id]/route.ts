@@ -33,7 +33,7 @@ const updatedEntry = await prisma.journalEntry.update({
       ...analysis,
     },
   })
-  revalidatePath(`/journal/${entry.id}`)
+  
 console.log(savedAnalysis )
-return NextResponse.json({data: updatedEntry})
+return NextResponse.json({data: {...updatedEntry,analysis: savedAnalysis }})
 }

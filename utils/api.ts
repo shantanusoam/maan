@@ -49,7 +49,7 @@ export const updateEntry = async (id, content) => {
   }
 }
 
-export const askQuestion = async (question) => {
+export const askQuestion = async (question) => { 
   const res = await fetch(
     new Request(createURL(`/api/question`), {
       method: 'POST',

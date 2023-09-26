@@ -1,5 +1,6 @@
 import EntryCard from '@/components/EntryCard'
 import NewEntry from '@/components/NewEntry'
+import Question from '@/components/Question'
 import { analyse } from '@/utils/ai'
 // import Question from '@/components/Question'
 // import { qa } from '@/util/ai'
@@ -30,7 +31,7 @@ const JournalPage = async () => {
     <div className="px-6 py-8 bg-zinc-100/50 h-full">
       <h1 className="text-4xl mb-12">Journals</h1>
       <div className="my-8">
-        {/* <Question /> */}
+        <Question />
       </div>
       <div className="grid grid-cols-3 gap-4">
         <NewEntry />
