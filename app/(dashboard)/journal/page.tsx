@@ -1,6 +1,7 @@
 import EntryCard from '@/components/EntryCard'
 import NewEntry from '@/components/NewEntry'
 import Question from '@/components/Question'
+import bg from '../../../public/helloKitty.jpg'
 import { analyse } from '@/utils/ai'
 // import Question from '@/components/Question'
 // import { qa } from '@/util/ai'
@@ -28,7 +29,9 @@ const getEntries = async () => {
 const JournalPage = async () => {
   const data = await getEntries()
   return (
-    <div className="px-6 py-8 bg-zinc-100/50 h-full">
+    <div className="px-6 py-8 bg-zinc-100/50 h-full" style={{
+      backgroundImage: `url(${bg})`
+    }}>
       <h1 className="text-4xl mb-12">Journals</h1>
       <div className="my-8">
         <Question />
