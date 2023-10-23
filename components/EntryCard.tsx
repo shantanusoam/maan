@@ -1,4 +1,4 @@
-import KittyStamp from './kittyComponents/kittyStamp.jsx'
+import KittyStamp from './kittyComponents/KittyStamp'
 const EntryCard = ({ entry }) => {
   console.log(entry)
   const date = new Date(entry.createdAt).toDateString()
