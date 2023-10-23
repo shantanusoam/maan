@@ -1,7 +1,7 @@
 'use client'
 import { askQuestion } from '@/utils/api'
 import React, { useState } from 'react'
-import KittyStamp from './kittyComponents/kittyStamp'
+import KittyStamp from './kittyComponents/KittyStamp'
 
 const Question = () => {
   const [value, setValue] = useState('')
