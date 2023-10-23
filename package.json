@@ -10,7 +10,9 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.23.5",
+    "@clerk/nextjs": "^4.25.6",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "@prisma/client": "^5.2.0",
     "@types/node": "20.5.3",
     "@types/react": "18.2.21",
@@ -19,7 +21,7 @@
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
     "langchain": "^0.0.150",
-    "next": "13.4.19",
+    "next": "^13.5.6",
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-autosave": "^0.4.2",

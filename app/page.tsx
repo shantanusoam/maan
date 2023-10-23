@@ -1,6 +1,6 @@
 import { auth } from '@clerk/nextjs'
 import Link from 'next/link'
-import bg from '../public/helloKitty.jpg'
+import bg from '../public/hellokittygroupBG2.jpg'
 import Image from 'next/image'
 
 export default async function Home() {

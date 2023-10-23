@@ -1,6 +1,7 @@
 'use client'
 import { askQuestion } from '@/utils/api'
 import React, { useState } from 'react'
+import KittyStamp from './kittyComponents/kittyStamp'
 
 const Question = () => {
   const [value, setValue] = useState('')
@@ -37,10 +38,7 @@ const Question = () => {
         <span>Created: 2023-10-20</span>
     </div> */}
     <div className="absolute top-0 right-0 p-2 transform translate-x-2 -translate-y-2 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6 text-pink-500">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 8v4m0 0v4m0-4h4m-4 0H5.293a1 1 0 01-.707-.293l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01.293.707V8z" />
-        </svg>
+       <KittyStamp baseColour={"#212121"}/>
     </div>
 </div>
       

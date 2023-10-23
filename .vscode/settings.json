@@ -1,6 +1,6 @@
 {
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.colorTheme": "One Dark Pro",
     "editor.tabSize": 2,
     "editor.fontFamily": "'Fira Mono', Menlo, Monaco, 'Courier New', monospace",
     "files.exclude": {
